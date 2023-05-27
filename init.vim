@@ -1,6 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-" Track engine
-Plug 'SirVer/ultisnips'
 " Snippets
 Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -13,6 +11,7 @@ Plug 'mattn/emmet-vim'
 " Syntax Highlighting
 Plug 'storyn26383/vim-vue'
 Plug 'pangloss/vim-javascript'
+Plug 'alteraction/vim-colors-solarized'
 Plug 'othree/html5.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'takac/vim-hardtime' "Hardtime disable basic motion keys
@@ -76,8 +75,9 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "<\<Esc>[48;2;%lu;%lu;%lum"
 
 set background=dark "Settings for background"
-colorscheme gruvbox
+colorscheme solarized
 "let g:deus_termcolors=256
+let g:solarized_termcolors=256
 
 "windows Splits"
 nmap vs : vsplit<cr>
@@ -99,7 +99,4 @@ set filetype=htmldjango
 " Configurations for Emmet
 let g:user_emmet_leader_key=','
 
-" Snippets Ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" TODO: add snippets for nvim
